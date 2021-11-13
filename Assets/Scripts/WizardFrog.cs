@@ -1,0 +1,89 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class WizardFrog : MonoBehaviour {
+
+    [Header("Unity references")]
+    public GameObject teleportRangeIndicator;
+    private PlayerController pc;
+    
+    [Header("Basic info")]
+    public float teleportRange = 2.45f;
+    private bool playerInRange = false;
+    private bool teleportable = false;
+
+    void Start() {
+        pc = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+    }
+
+    void Update() {
+        // enable the teleport range indicator if player is close enough and wants to interact
+        if (this.playerInRange && Input.GetKeyDown(KeyCode.E) && !this.teleportable) {
+            this.enableIndicator();
+        }
+
+        // disable the teleport range indicator if player interacts with the wizard frog for the second time
+        else if (this.teleportable && Input.GetKeyDown(KeyCode.E)) {
+            this.disableIndicator();
+        }
+
+        // try teleporting the wizard frog if it's in correct state and user pressed LMB
+        if (this.teleportable && Input.GetMouseButtonDown(0)) {
+            this.teleport(Input.mousePosition);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collission) {
+        // TODO: enable "Press E to teleport the Wizard Frog" dialog OR do some sparkly thingy
+
+        this.playerInRange = true;
+    }
+
+    private void OnCollisionExit2D(Collision2D collission) {
+        this.disableIndicator();
+
+        this.playerInRange = false;
+    }
+
+    public void enableIndicator() {
+        if (!this.teleportRangeIndicator.activeSelf) {
+            pc.disableControls();
+
+            this.teleportRangeIndicator.SetActive(true);
+
+            this.teleportable = true;
+        }
+    }
+
+    public void disableIndicator() {
+        if (this.teleportRangeIndicator.activeSelf) {
+            pc.enableControls();
+
+            this.teleportRangeIndicator.SetActive(false);
+
+            this.teleportable = false;
+        }
+    }
+
+    public void teleport(Vector3 mousePosition) {
+        // convert mouse position to world position
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        worldPosition.z = 0f;
+
+        float distance = Vector3.Distance(transform.position, worldPosition);
+
+        if (distance > this.teleportRange) {
+            return;
+        }
+
+        // teleport the wizard frog
+        this.transform.position = worldPosition;
+
+        // clean up
+        this.disableIndicator();
+
+        Destroy(this); // TODO: consider removing the limit
+    }
+
+}
