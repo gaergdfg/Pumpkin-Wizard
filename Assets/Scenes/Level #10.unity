@@ -601,6 +601,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4963045064673830073, guid: 0c59898931c27ea419b1977c797d73bf, type: 3}
+      propertyPath: teleportRange
+      value: 2.625
+      objectReference: {fileID: 0}
     - target: {fileID: 4963045064673830075, guid: 0c59898931c27ea419b1977c797d73bf, type: 3}
       propertyPath: m_Name
       value: WizardFrog (1)
@@ -1063,6 +1067,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4963045064673830073, guid: 0c59898931c27ea419b1977c797d73bf, type: 3}
+      propertyPath: teleportRange
+      value: 2.625
+      objectReference: {fileID: 0}
     - target: {fileID: 4963045064673830075, guid: 0c59898931c27ea419b1977c797d73bf, type: 3}
       propertyPath: m_Name
       value: WizardFrog
