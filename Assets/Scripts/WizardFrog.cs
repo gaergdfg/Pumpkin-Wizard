@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ public class WizardFrog : MonoBehaviour {
 
     [Header("Unity references")]
     public GameObject teleportRangeIndicator;
+    private ParticleSystem particles;
     private PlayerController pc;
     
     [Header("Basic info")]
@@ -15,6 +17,7 @@ public class WizardFrog : MonoBehaviour {
 
     void Start() {
         this.pc = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        this.particles = gameObject.GetComponentInChildren<ParticleSystem>();
     }
 
     void Update() {
@@ -84,7 +87,9 @@ public class WizardFrog : MonoBehaviour {
 
         // teleport the wizard frog
         this.transform.position = worldPosition;
-        // TODO: add particle effects
+
+        // display particles
+        this.particles.Play();
 
         // clean up
         this.disableIndicator();

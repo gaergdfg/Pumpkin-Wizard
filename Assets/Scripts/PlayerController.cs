@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour {
     public float checkRadius = 0.55f;
     private bool facingRight = true;
     private bool controlsDisabled = false;
+    private bool remoteTeleportUnlocked = false;
 
     void Start() {
         this.rb = GetComponent<Rigidbody2D>();
@@ -24,6 +26,12 @@ public class PlayerController : MonoBehaviour {
     }
 
     void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            // TODO: possible music change
+            this.gm.setGoToLevelSelect(true);
+            SceneManager.LoadScene("Menu");
+        }
+
         if (controlsDisabled) {
             return;
         }
@@ -46,7 +54,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         // try toggling wizard frog's teleport range indicator
-        if (this.gm.getRemoteTeleportUnlocked() && Input.GetKeyDown(KeyCode.E)) {
+        if (this.getRemoteTeleportUnlocked() && Input.GetKeyDown(KeyCode.E)) {
             this.activateWizardFrogTeleport(Input.mousePosition);
         }
     }
@@ -62,6 +70,14 @@ public class PlayerController : MonoBehaviour {
     public void stop() {
         this.rb.velocity = Vector2.zero;
         this.rb.angularVelocity = 0f;
+    }
+    public void setRemoteTeleportUnlocked(bool remoteTeleportUnlocked) {
+        this.remoteTeleportUnlocked = remoteTeleportUnlocked;
+        transform.Find("Wand").gameObject.GetComponent<SpriteRenderer>().enabled = remoteTeleportUnlocked;
+    }
+
+    public bool getRemoteTeleportUnlocked() {
+        return this.remoteTeleportUnlocked;
     }
 
     private void flipPlayerX() {
