@@ -11,7 +11,7 @@ public class WizardFrog : MonoBehaviour {
     private PlayerController pc;
     
     [Header("Basic info")]
-    public float teleportRange = 2.45f;
+    public float teleportRange = 2.625f;
     private bool playerInRange = false;
     private bool teleportable = false;
 
