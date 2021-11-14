@@ -47,24 +47,28 @@ public class WizardFrog : MonoBehaviour {
     }
 
     public void enableIndicator() {
-        if (!this.teleportRangeIndicator.activeSelf) {
-            this.pc.disableControls();
-            this.pc.stop();
-
-            this.teleportRangeIndicator.SetActive(true);
-
-            this.teleportable = true;
+        if (this.teleportRangeIndicator.activeSelf) {
+            return;
         }
+
+        this.pc.disableControls();
+        this.pc.stop();
+
+        this.teleportRangeIndicator.SetActive(true);
+
+        this.teleportable = true;
     }
 
     public void disableIndicator() {
-        if (this.teleportRangeIndicator.activeSelf) {
-            this.pc.enableControls();
-
-            this.teleportRangeIndicator.SetActive(false);
-
-            this.teleportable = false;
+        if (!this.teleportRangeIndicator.activeSelf) {
+            return;
         }
+        
+        this.pc.enableControls();
+
+        this.teleportRangeIndicator.SetActive(false);
+
+        this.teleportable = false;
     }
 
     public void teleport(Vector3 mousePosition) {
