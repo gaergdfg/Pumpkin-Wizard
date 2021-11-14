@@ -31,7 +31,7 @@ public class Intro : MonoBehaviour {
         this.pc.disableControls();
         this.introOverlay.SetActive(true);
 
-        this.text += "\n\nPress Space to continue";
+        this.text += "\n\nPress <color=\"green\">Space<color=\"white\"> to continue";
         this.textArray = Regex.Split(this.text, @"");
         this.textContainer.text = "";
     }
@@ -41,6 +41,13 @@ public class Intro : MonoBehaviour {
             if (this.currCharIndex < this.textArray.Length) {
                 string currChar = this.textArray[this.currCharIndex++];
                 this.displayText += currChar;
+                if (currChar == "<") {
+                    for (; this.textArray[this.currCharIndex] != ">";) {
+                        this.displayText += this.textArray[this.currCharIndex++];
+                    }
+                    this.displayText += this.textArray[this.currCharIndex++];
+                }
+
                 this.textContainer.text = this.displayText;
 
                 if (this.isStopCharacter(currChar)) {
@@ -77,7 +84,7 @@ public class Intro : MonoBehaviour {
     }
 
     private bool isStopCharacter(string c) {
-        return c == " " || c == "," || c == "." || c == "!" || c == "?";
+        return c == "," || c == "." || c == "!" || c == "?";
     }
 
     private IEnumerator awaitEnableControls() {

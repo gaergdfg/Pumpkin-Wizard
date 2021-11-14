@@ -841,6 +841,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2011319443834951688, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
+      propertyPath: text
+      value: You've proven yourself worthy of handling my most precious possession!
+        In front of yuou floats <color="purple">Betty<color="white">, my <color="purple">Magic
+        Wand<color="white">! Take great care of it.<br><br>Once you have <color="purple">Betty<color="white">
+        in your grasp, you can command my clones to teleport from great distances!
+      objectReference: {fileID: 0}
     - target: {fileID: 2011319443834951689, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -892,6 +899,13 @@ PrefabInstance:
     - target: {fileID: 2011319443834951691, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2011319444121810453, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
+      propertyPath: m_text
+      value: You've proven yourself worthy of handling my most precious possession!
+        In front of yuou floats <color="purple">Betty<color="white">, my <color="purple">Magic
+        Wand<color="white">! Take great care of it.<br><br>Once you have <color="purple">Betty<color="white">
+        in your grasp, you can command my clones to teleport from great distances!
       objectReference: {fileID: 0}
     - target: {fileID: 2011319444542862925, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_IsActive
