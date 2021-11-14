@@ -19,8 +19,8 @@ public class PlayerController : MonoBehaviour {
     private bool controlsDisabled = false;
 
     void Start() {
-        rb = GetComponent<Rigidbody2D>();
-        gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        this.rb = GetComponent<Rigidbody2D>();
+        this.gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
     }
 
     void Update() {
@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour {
         float input = Input.GetAxisRaw("Horizontal");
 
         // move player horizontally
-        rb.velocity = new Vector2(input * speed, rb.velocity.y);
+        this.rb.velocity = new Vector2(input * speed, this.rb.velocity.y);
 
         // flip player sprite when moving left/right
         if ((input < 0 && this.facingRight) || (input > 0 && !this.facingRight)) {
@@ -57,6 +57,11 @@ public class PlayerController : MonoBehaviour {
 
     public void disableControls() {
         this.controlsDisabled = true;
+    }
+
+    public void stop() {
+        this.rb.velocity = Vector2.zero;
+        this.rb.angularVelocity = 0f;
     }
 
     private void flipPlayerX() {
