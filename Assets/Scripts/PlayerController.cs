@@ -26,6 +26,11 @@ public class PlayerController : MonoBehaviour {
     }
 
     void Update() {
+        // restart the level if player presses R or if he fell off
+        if (Input.GetKeyDown(KeyCode.R) || transform.position.y <= -10f) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape)) {
             // TODO: possible music change
             this.gm.setGoToLevelSelect(true);
