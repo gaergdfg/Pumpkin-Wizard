@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-    
+
     [Header("Basic info")]
     private static GameManager instance;
 
     [Header("Game state")]
-    private bool remoteTeleportUnlocked = true; // TODO: set initially to false
+    private bool remoteTeleportUnlocked = false;
 
-    void Awake() {
+    private void Awake() {
         if (instance == null) {
             instance = this;
             DontDestroyOnLoad(gameObject);
@@ -19,8 +19,11 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    public bool getRemoteTeleportUnlocked() {
+    public bool GetRemoteTeleportUnlocked() {
         return this.remoteTeleportUnlocked;
     }
 
+    public void SetRemoteTeleportUnlocked(bool remoteTeleportUnlocked) {
+        this.remoteTeleportUnlocked = remoteTeleportUnlocked;
+    }
 }

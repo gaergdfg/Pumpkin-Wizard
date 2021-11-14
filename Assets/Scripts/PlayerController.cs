@@ -18,12 +18,12 @@ public class PlayerController : MonoBehaviour {
     private bool facingRight = true;
     private bool controlsDisabled = false;
 
-    void Start() {
+    private void Start() {
         rb = GetComponent<Rigidbody2D>();
         gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
     }
 
-    void Update() {
+    private void Update() {
         if (controlsDisabled) {
             return;
         }
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         // try toggling wizard frog's teleport range indicator
-        if (this.gm.getRemoteTeleportUnlocked() && Input.GetKeyDown(KeyCode.E)) {
+        if (this.gm.GetRemoteTeleportUnlocked() && Input.GetKeyDown(KeyCode.E)) {
             this.activateWizardFrogTeleport(Input.mousePosition);
         }
     }
@@ -92,5 +92,4 @@ public class PlayerController : MonoBehaviour {
 
         wizardFrogScript.enableIndicator();
     }
-
 }
