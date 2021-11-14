@@ -85,21 +85,16 @@ public class PlayerController : MonoBehaviour {
         // get wizard frog near the mouse cursor
         Vector2 size = new Vector2(0.5f, 0.5f);
         Collider2D wizardFrog = Physics2D.OverlapBox(worldPosition2D, size, 0f);
-        Debug.Log("xd2");
 
 
         if (!wizardFrog) {
             return;
         }
 
-        Debug.Log("xd");
-
         WizardFrog wizardFrogScript = wizardFrog.GetComponent<WizardFrog>(); // TODO: consider removing the check
         if (wizardFrogScript == null) {
             return;
         }
-
-        Debug.Log("xd1");
 
         wizardFrogScript.enableIndicator();
     }
