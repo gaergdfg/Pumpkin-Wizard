@@ -86,6 +86,7 @@ public class PlayerController : MonoBehaviour {
         Vector2 size = new Vector2(0.5f, 0.5f);
         Collider2D wizardFrog = Physics2D.OverlapBox(worldPosition2D, size, 0f);
 
+
         if (!wizardFrog) {
             return;
         }
