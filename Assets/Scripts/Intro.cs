@@ -31,7 +31,7 @@ public class Intro : MonoBehaviour {
         this.pc.disableControls();
         this.introOverlay.SetActive(true);
 
-        this.text += "\n\nPress any button to continue";
+        this.text += "\n\nPress Space to continue";
         this.textArray = Regex.Split(this.text, @"");
         this.textContainer.text = "";
     }
@@ -59,13 +59,20 @@ public class Intro : MonoBehaviour {
             } else {
                 this.animator.SetBool("talk", false);
 
-                if (Input.anyKey) {
+                if (Input.GetKeyDown(KeyCode.Space)) {
                     this.introOverlay.SetActive(false);
                     this.pc.enableControls();
                 }
             }
         } else {
             this.timeBetweenChars -= Time.deltaTime;
+        }
+
+        if (this.currCharIndex < this.textArray.Length && Input.anyKey) {
+            this.currCharIndex = this.textArray.Length;
+            this.displayText = this.text;
+            this.textContainer.text = this.displayText;
+            this.animator.SetBool("talk", false);
         }
     }
 
