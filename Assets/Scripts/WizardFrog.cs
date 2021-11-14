@@ -47,9 +47,12 @@ public class WizardFrog : MonoBehaviour {
     }
 
     public void enableIndicator() {
+        Debug.Log("siema1");
         if (!this.teleportRangeIndicator.activeSelf) {
+            Debug.Log("siema");
             this.pc.disableControls();
             this.pc.stop();
+            Debug.Log("siema2");
 
             this.teleportRangeIndicator.SetActive(true);
 
@@ -58,7 +61,9 @@ public class WizardFrog : MonoBehaviour {
     }
 
     public void disableIndicator() {
+        Debug.Log("siema5");
         if (this.teleportRangeIndicator.activeSelf) {
+            Debug.Log("siema7");
             this.pc.enableControls();
 
             this.teleportRangeIndicator.SetActive(false);

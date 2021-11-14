@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
     private static GameManager instance;
 
     [Header("Game state")]
-    private bool remoteTeleportUnlocked = false;
+    public bool remoteTeleportUnlocked = false;
     private int levelNo = 1;
     private bool[] levelBeaten;
     private bool goToLevelSelect = false;
@@ -26,11 +26,7 @@ public class GameManager : MonoBehaviour {
         this.levelBeaten = new bool[levelNo + 1];
     }
 
-    public bool GetRemoteTeleportUnlocked() {
-        return this.remoteTeleportUnlocked;
-    }
-
-    public void SetRemoteTeleportUnlocked(bool remoteTeleportUnlocked) {
+    public void setRemoteTeleportUnlocked(bool remoteTeleportUnlocked) {
         this.remoteTeleportUnlocked = remoteTeleportUnlocked;
     }
     

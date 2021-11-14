@@ -12,7 +12,7 @@ public class Wand : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        gm.SetRemoteTeleportUnlocked(true);
+        gm.setRemoteTeleportUnlocked(true);
         player.transform.Find("Wand").gameObject.GetComponent<SpriteRenderer>().enabled = true;
         Destroy(gameObject);
     }
