@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         // jump if player is grounded and presses jump
-        bool isGrounded = Physics2D.OverlapCircle(this.groundCheck.position, this.checkRadius, this.groundMask);
+        bool isGrounded = Physics2D.Raycast(this.groundCheck.position, Vector2.down, this.checkRadius, this.groundMask);
         if (isGrounded && playerWantsToJump()) {
             rb.velocity = Vector2.up * this.jumpForce;
         }
