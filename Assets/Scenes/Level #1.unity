@@ -658,7 +658,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf2fe4a3e5cbc74e856689b03e962e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  remoteTeleportUnlocked: 0
 --- !u!4 &1939571814
 Transform:
   m_ObjectHideFlags: 0

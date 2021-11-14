@@ -7,9 +7,19 @@ using TMPro;
 
 public class MainMenu : MonoBehaviour {
 
-    public void LevelButton() {
-        string sceneIndex = EventSystem.current.currentSelectedGameObject.GetComponentInChildren<TextMeshProUGUI>().text;
-        SceneManager.LoadScene("Level #" + sceneIndex);
+    [SerializeField] private GameObject levelMenu;
+
+    private GameManager gm;
+
+    private void Awake() {
+        gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+    }
+
+    public void Start() {
+        if (gm.getGoToLevelSelect()) {
+            gameObject.SetActive(false);
+            levelMenu.SetActive(true);
+        }
     }
 
     public void QuitButton() {

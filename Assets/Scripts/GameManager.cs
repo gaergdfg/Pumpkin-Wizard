@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour {
     private static GameManager instance;
 
     [Header("Game state")]
-    public bool remoteTeleportUnlocked = false;
     private int levelNo = 1;
     private bool[] levelBeaten;
     private bool goToLevelSelect = false;
@@ -20,18 +19,8 @@ public class GameManager : MonoBehaviour {
         } else {
             Destroy(gameObject);
         }
-    }
 
-    void Start() {
         this.levelBeaten = new bool[levelNo + 1];
-    }
-
-    public void setRemoteTeleportUnlocked(bool remoteTeleportUnlocked) {
-        this.remoteTeleportUnlocked = remoteTeleportUnlocked;
-    }
-    
-    public bool getRemoteTeleportUnlocked() {
-        return this.remoteTeleportUnlocked;
     }
 
     public void markLevelBeaten(int levelId) {
@@ -48,6 +37,10 @@ public class GameManager : MonoBehaviour {
 
     public void setGoToLevelSelect(bool goToLevelSelect) {
         this.goToLevelSelect = goToLevelSelect;
+    }
+
+    public bool isLevelBeaten(int level) {
+        return levelBeaten[level];
     }
 
 }
