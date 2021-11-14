@@ -61,7 +61,7 @@ public class Intro : MonoBehaviour {
 
                 if (Input.GetKeyDown(KeyCode.Space)) {
                     this.introOverlay.SetActive(false);
-                    this.pc.enableControls();
+                    StartCoroutine(this.awaitEnableControls());
                 }
             }
         } else {
@@ -78,6 +78,11 @@ public class Intro : MonoBehaviour {
 
     private bool isStopCharacter(string c) {
         return c == " " || c == "," || c == "." || c == "!" || c == "?";
+    }
+
+    private IEnumerator awaitEnableControls() {
+        yield return new WaitForSeconds(0.1f);
+        this.pc.enableControls();
     }
 
 }
