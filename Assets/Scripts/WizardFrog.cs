@@ -14,7 +14,7 @@ public class WizardFrog : MonoBehaviour {
     private bool teleportable = false;
 
     void Start() {
-        pc = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        this.pc = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
     }
 
     void Update() {
@@ -48,7 +48,8 @@ public class WizardFrog : MonoBehaviour {
 
     public void enableIndicator() {
         if (!this.teleportRangeIndicator.activeSelf) {
-            pc.disableControls();
+            this.pc.disableControls();
+            this.pc.stop();
 
             this.teleportRangeIndicator.SetActive(true);
 
@@ -58,7 +59,7 @@ public class WizardFrog : MonoBehaviour {
 
     public void disableIndicator() {
         if (this.teleportRangeIndicator.activeSelf) {
-            pc.enableControls();
+            this.pc.enableControls();
 
             this.teleportRangeIndicator.SetActive(false);
 
@@ -79,6 +80,7 @@ public class WizardFrog : MonoBehaviour {
 
         // teleport the wizard frog
         this.transform.position = worldPosition;
+        // TODO: add particle effects
 
         // clean up
         this.disableIndicator();

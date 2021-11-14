@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -19,17 +18,12 @@ public class PlayerController : MonoBehaviour {
     private bool facingRight = true;
     private bool controlsDisabled = false;
 
-    private void Start() {
-        rb = GetComponent<Rigidbody2D>();
-        gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+    void Start() {
+        this.rb = GetComponent<Rigidbody2D>();
+        this.gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
     }
 
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            // TODO: possible music change
-            SceneManager.LoadScene("Menu");
-        }
-
+    void Update() {
         if (controlsDisabled) {
             return;
         }
@@ -38,7 +32,7 @@ public class PlayerController : MonoBehaviour {
         float input = Input.GetAxisRaw("Horizontal");
 
         // move player horizontally
-        rb.velocity = new Vector2(input * speed, rb.velocity.y);
+        this.rb.velocity = new Vector2(input * speed, this.rb.velocity.y);
 
         // flip player sprite when moving left/right
         if ((input < 0 && this.facingRight) || (input > 0 && !this.facingRight)) {
@@ -52,7 +46,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         // try toggling wizard frog's teleport range indicator
-        if (this.gm.GetRemoteTeleportUnlocked() && Input.GetKeyDown(KeyCode.E)) {
+        if (this.gm.getRemoteTeleportUnlocked() && Input.GetKeyDown(KeyCode.E)) {
             this.activateWizardFrogTeleport(Input.mousePosition);
         }
     }
@@ -63,6 +57,11 @@ public class PlayerController : MonoBehaviour {
 
     public void disableControls() {
         this.controlsDisabled = true;
+    }
+
+    public void stop() {
+        this.rb.velocity = Vector2.zero;
+        this.rb.angularVelocity = 0f;
     }
 
     private void flipPlayerX() {
@@ -98,4 +97,5 @@ public class PlayerController : MonoBehaviour {
 
         wizardFrogScript.enableIndicator();
     }
+
 }
