@@ -36,11 +36,12 @@ public class Intro : MonoBehaviour {
         this.text += "\n\nPress <color=\"green\">Space<color=\"white\"> to continue";
         this.textArray = Regex.Split(this.text, @"");
         this.textContainer.text = "";
+
+        this.am.play("frog_talk");
     }
 
     void Update() {
         if (this.timeBetweenChars <= 0f) {
-            am.play("frog_talk");
             if (this.currCharIndex < this.textArray.Length) {
                 string currChar = this.textArray[this.currCharIndex++];
                 this.displayText += currChar;
@@ -56,17 +57,20 @@ public class Intro : MonoBehaviour {
                 if (this.isStopCharacter(currChar)) {
                     this.timeBetweenChars = this.timeOnWhitespaceChar;
                     if (this.isTalking) {
+                        this.am.stop("frog_talk");
                         this.animator.SetBool("talk", false);
                         this.isTalking = false;
                     }
                 } else {
                     this.timeBetweenChars = this.timeBetweenCharsBase;
                     if (!this.isTalking) {
+                        this.am.play("frog_talk");
                         this.animator.SetBool("talk", true);
                         this.isTalking = true;
                     }
                 }
             } else {
+                this.am.stop("frog_talk");
                 this.animator.SetBool("talk", false);
 
                 if (Input.GetKeyDown(KeyCode.Space)) {

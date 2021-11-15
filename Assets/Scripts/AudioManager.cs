@@ -26,8 +26,8 @@ public class AudioManager : MonoBehaviour {
 
 		foreach (Sound sound in sounds) {
 			if (sound.name == "Theme") {
-				sound.source = this.gameObject.AddComponent<AudioSource>();
-			} else if (isVoiceSound(sound.name))  {
+				sound.source = gameObject.AddComponent<AudioSource>();
+			} else if (isVoiceSound(sound.name)) {
                 sound.source = voicesContainer.AddComponent<AudioSource>();
             } else {
                 sound.source = soundEffectsContainer.AddComponent<AudioSource>();
@@ -53,11 +53,24 @@ public class AudioManager : MonoBehaviour {
 
 	public void play(string name) {
 		Sound sound = findSound(name);
+
 		if (sound == null) {
             Debug.Log("sound: (" + name + ") not found");
             return;
         }
+
         sound.source.Play();
+	}
+
+	public void stop(string name) {
+		Sound sound = findSound(name);
+
+		if (sound == null) {
+            Debug.Log("sound: (" + name + ") not found");
+            return;
+		}
+
+		sound.source.Stop();
 	}
 
 	public void setVolume(float volume) {
