@@ -9,6 +9,7 @@ public class Intro : MonoBehaviour {
 
     [Header("Unity references")]
     private PlayerController pc;
+    private AudioManager am;
     public TextMeshProUGUI textContainer;
     public GameObject introOverlay;
     public Animator animator;
@@ -27,6 +28,7 @@ public class Intro : MonoBehaviour {
 
     void Start() {
         this.pc = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        this.am = GameObject.FindWithTag("AudioManager").GetComponent<AudioManager>();
 
         this.pc.disableControls();
         this.introOverlay.SetActive(true);
@@ -38,6 +40,7 @@ public class Intro : MonoBehaviour {
 
     void Update() {
         if (this.timeBetweenChars <= 0f) {
+            am.play("frog_talk");
             if (this.currCharIndex < this.textArray.Length) {
                 string currChar = this.textArray[this.currCharIndex++];
                 this.displayText += currChar;

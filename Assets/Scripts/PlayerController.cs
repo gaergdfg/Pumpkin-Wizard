@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
     public Transform groundCheck;
     public LayerMask groundMask;
     private GameManager gm;
+    private AudioManager am;
 
     [Header("Basic info")]
     public float speed = 4.5f;
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour {
     void Start() {
         this.rb = GetComponent<Rigidbody2D>();
         this.gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        this.am = GameObject.FindWithTag("AudioManager").GetComponent<AudioManager>();
     }
 
     void Update() {
@@ -56,6 +58,7 @@ public class PlayerController : MonoBehaviour {
         bool isGrounded = Physics2D.Raycast(this.groundCheck.position, Vector2.down, this.checkRadius, this.groundMask);
         if (isGrounded && playerWantsToJump()) {
             rb.velocity = Vector2.up * this.jumpForce;
+            am.play("player_jump");
         }
 
         // try toggling wizard frog's teleport range indicator

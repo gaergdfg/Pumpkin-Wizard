@@ -1,0 +1,207 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1674331698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1674331699}
+  m_Layer: 0
+  m_Name: SoundEffectsContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1674331699
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674331698}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6529471116298310639}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &323095338063715722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4470557596006876684}
+  m_Layer: 0
+  m_Name: VoicesContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4470557596006876684
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323095338063715722}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6529471116298310639}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6529471116298310633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6529471116298310639}
+  - component: {fileID: 6529471116298310638}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: AudioManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6529471116298310639
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6529471116298310633}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1674331699}
+  - {fileID: 4470557596006876684}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6529471116298310638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6529471116298310633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f506910361e429a4096ef2b7e99ef786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffectsContainer: {fileID: 1674331698}
+  voicesContainer: {fileID: 323095338063715722}
+  sounds:
+  - name: Theme
+    clip: {fileID: 8300000, guid: 8de8d63e4d70a1240badc51f444c4eb1, type: 3}
+    volume: 0.3
+    loop: 1
+    source: {fileID: 0}
+  - name: button_hover
+    clip: {fileID: 8300000, guid: 099507806e1357b4aa80154625b2c9d4, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: frog_smoke
+    clip: {fileID: 8300000, guid: 099507806e1357b4aa80154625b2c9d4, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: frog_talk
+    clip: {fileID: 8300000, guid: 099507806e1357b4aa80154625b2c9d4, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: player_jump
+    clip: {fileID: 8300000, guid: 099507806e1357b4aa80154625b2c9d4, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: k_great_job
+    clip: {fileID: 8300000, guid: 558bf0c99d66d2949a2adf66e87c79ac, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: k_lets_go
+    clip: {fileID: 8300000, guid: 0e6363fefa967dc49973b2112f6b4cc9, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: k_nice
+    clip: {fileID: 8300000, guid: 2e8d51d449b339b428f4eb75be49d115, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: k_oh_yeah
+    clip: {fileID: 8300000, guid: b9396025da4c70049b4f9527929ce040, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: k_told_ya_hed_make_it
+    clip: {fileID: 8300000, guid: 9b193d993f3faaa47b433412d140af87, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: k_well_done
+    clip: {fileID: 8300000, guid: b9733df6d2a76834baf0be996c59c562, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: k_wow
+    clip: {fileID: 8300000, guid: f0a3c041538a234489864bd6289c7921, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: p_atta_boy
+    clip: {fileID: 8300000, guid: e5c56b6ea0984134d9ca186f837d8bc6, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: p_brr
+    clip: {fileID: 8300000, guid: 152f3b051c8d24a43996c1afba3ca226, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: p_good_job
+    clip: {fileID: 8300000, guid: 44c5f7ad27450204583a99e7f78cfb23, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: p_he_did_it
+    clip: {fileID: 8300000, guid: 05b36dea894dcdc4db675140a03eff71, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: p_way_to_go
+    clip: {fileID: 8300000, guid: 377b4b2703f6aea4794ebc63c25293d3, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: p_wow
+    clip: {fileID: 8300000, guid: 8e9c657598528b24b8cf902ab7bfed2f, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: p_yeah
+    clip: {fileID: 8300000, guid: 099507806e1357b4aa80154625b2c9d4, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  generalVolume: 0
+  areSpecialEffectsMuted: 0

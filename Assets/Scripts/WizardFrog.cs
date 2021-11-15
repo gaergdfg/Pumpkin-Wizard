@@ -9,6 +9,7 @@ public class WizardFrog : MonoBehaviour {
     public GameObject teleportRangeIndicator;
     private ParticleSystem particles;
     private PlayerController pc;
+    private AudioManager am;
     
     [Header("Basic info")]
     public float teleportRange = 2.625f;
@@ -18,6 +19,7 @@ public class WizardFrog : MonoBehaviour {
     void Start() {
         this.pc = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         this.particles = gameObject.GetComponentInChildren<ParticleSystem>();
+        this.am = GameObject.FindWithTag("AudioManager").GetComponent<AudioManager>();
     }
 
     void Update() {
@@ -90,6 +92,9 @@ public class WizardFrog : MonoBehaviour {
 
         // display particles
         this.particles.Play();
+
+        // play sound
+        am.play("frog_smoke");
 
         // clean up
         this.disableIndicator();

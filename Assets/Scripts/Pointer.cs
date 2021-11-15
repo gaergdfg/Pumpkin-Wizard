@@ -7,9 +7,17 @@ using UnityEngine.UI;
 public class Pointer : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
     private GameObject pointer;
     private Image pointerImage;
+    private AudioManager audioManager;
     private Button button;
 
     private Vector3 pointerPosition;
+
+    private void Awake() {
+        pointer = GameObject.FindWithTag("Pointer");
+        pointerImage = pointer.GetComponent<Image>();
+        audioManager = GameObject.FindWithTag("AudioManager").GetComponent<AudioManager>();
+        button = GetComponent<Button>();
+    }
 
     private void Start() {
         button.onClick.AddListener(DisablePointer);
@@ -20,12 +28,6 @@ public class Pointer : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
         pointerPosition = new Vector3(transform.position.x + width / 2, transform.position.y + height / 2, transform.position.z);
     }
 
-    private void Awake() {
-        pointer = GameObject.FindWithTag("Pointer");
-        pointerImage = pointer.GetComponent<Image>();
-        button = GetComponent<Button>();
-    }
-
     private void DisablePointer() {
         pointerImage.enabled = false;
     }
@@ -33,6 +35,7 @@ public class Pointer : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
     public void OnPointerEnter(PointerEventData eventData) {
         pointer.transform.position = pointerPosition;
         pointerImage.enabled = true;
+        audioManager.play("button_hover");
     }
 
     public void OnPointerExit(PointerEventData eventData) {
