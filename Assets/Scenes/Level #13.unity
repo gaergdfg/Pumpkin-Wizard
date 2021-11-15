@@ -905,7 +905,7 @@ PrefabInstance:
     - target: {fileID: 2011319443834951688, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: text
       value: Hey Pumpkin, wanna hear a joke?<br>Don't answer, I'll tell you anyway.<br><br>What
-        do you call a wizard who is good at calculus?<br><br> A <color="green">MATHEMAGICIAN<color="white">!
+        do you call a wizard who is good at calculus?<br><br> A <color="purple">MATHEMAGICIAN<color="white">!
         AHHAHAAHAH!
       objectReference: {fileID: 0}
     - target: {fileID: 2011319443834951689, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
@@ -962,7 +962,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2011319444121810453, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_text
-      value: placeholder
+      value: Hey Pumpkin, wanna hear a joke?<br>Don't answer, I'll tell you anyway.<br><br>What
+        do you call a wizard who is good at calculus?<br><br> A <color="purple">MATHEMAGICIAN<color="white">!
+        AHHAHAAHAH!
       objectReference: {fileID: 0}
     - target: {fileID: 2011319444542862925, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_IsActive

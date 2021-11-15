@@ -1766,14 +1766,14 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.3
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Volume, Assembly-CSharp
+      - m_Target: {fileID: 1727741127}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: setVolume
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2990,8 +2990,8 @@ RectTransform:
   m_Father: {fileID: 1072221811}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4257,6 +4257,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1696620025}
   m_CullTransparentMesh: 1
+--- !u!114 &1727741127 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6529471116298310638, guid: c9ada236dffacb04ba0d98ac8005e54a, type: 3}
+  m_PrefabInstance: {fileID: 6529471116008319170}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f506910361e429a4096ef2b7e99ef786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1736067877 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5217657139894040918, guid: db663493815ef7848aca6a7dc83f5e6b, type: 3}
@@ -5023,7 +5034,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

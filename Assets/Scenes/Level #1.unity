@@ -785,8 +785,9 @@ PrefabInstance:
       value: 'Welcome My Brave Pumpkin!<br><br>You are here for a reason. You see,
         I made a bet. I have to teach an ordinary pumpkin the ways of magic. Go on,
         show the world what you''re worth.<br><br>Here is your first task: get to
-        the pink portal using your <color="green">A<color="white"> and <color="green">D<color="white">
-        buttons!<br>Do not let me down, or I shall be broke...'
+        the pink <color="purple">portal<color="white"> using your <color="green">A<color="white">
+        and <color="green">D<color="white"> buttons!<br>Do not let me down, or I
+        shall be broke...'
       objectReference: {fileID: 0}
     - target: {fileID: 2011319443834951689, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_RootOrder
@@ -842,7 +843,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2011319444121810453, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_text
-      value: placeholder
+      value: 'Welcome My Brave Pumpkin!<br><br>You are here for a reason. You see,
+        I made a bet. I have to teach an ordinary pumpkin the ways of magic. Go on,
+        show the world what you''re worth.<br><br>Here is your first task: get to
+        the pink <color="purple">portal<color="white"> using your <color="green">A<color="white">
+        and <color="green">D<color="white"> buttons!<br>Do not let me down, or I
+        shall be broke...'
       objectReference: {fileID: 0}
     - target: {fileID: 2011319444542862925, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_IsActive

@@ -679,6 +679,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4963045063069821528, guid: 0c59898931c27ea419b1977c797d73bf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4963045063069821535, guid: 0c59898931c27ea419b1977c797d73bf, type: 3}
       propertyPath: m_LocalScale.x
       value: 28
@@ -701,11 +705,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4963045064673830079, guid: 0c59898931c27ea419b1977c797d73bf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.88
+      value: 3.05
       objectReference: {fileID: 0}
     - target: {fileID: 4963045064673830079, guid: 0c59898931c27ea419b1977c797d73bf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.91
+      value: 2.84
       objectReference: {fileID: 0}
     - target: {fileID: 4963045064673830079, guid: 0c59898931c27ea419b1977c797d73bf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1374,6 +1378,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2011319443834951688, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
+      propertyPath: text
+      value: ' What the worst thing about being an illiterate wizard? <br><br>You
+        can''t <color="purple">spell<color="white">. <br><br>Hahahahhahah HA'
+      objectReference: {fileID: 0}
     - target: {fileID: 2011319443834951689, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -1424,7 +1433,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2011319443834951691, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2011319444121810453, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
+      propertyPath: m_text
+      value: "\rWhat the worst thing about being an illiterate wizard?\r<br><br>You
+        can't <color=\"purple\">spell<color=\"white\">.\r<br><br>Hahahahhahah HA"
       objectReference: {fileID: 0}
     - target: {fileID: 2011319444542862925, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_IsActive

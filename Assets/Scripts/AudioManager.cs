@@ -39,9 +39,10 @@ public class AudioManager : MonoBehaviour {
 			sound.source.loop = sound.loop;
 		}
 
-		generalVolume = 1f;
+		generalVolume = 0.5f;
 		areSpecialEffectsMuted = false;
 	}
+
 	void Start() {
 		play("Theme");
 	}
@@ -65,6 +66,7 @@ public class AudioManager : MonoBehaviour {
 			sound.source.volume = volume;
 		}
 	}
+
 	public void toggleSpecialEffects() {
 		areSpecialEffectsMuted = !areSpecialEffectsMuted;
 		foreach (Sound sound in sounds) {

@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class TotallyNotAnEasterEgg : MonoBehaviour
 {
-    public GameObject voicesContainer;
     private AudioSource[] sounds;
 
     private int soundIndex = 0;
 
     private void Start() {
-        sounds = voicesContainer.GetComponents<AudioSource>();
+        sounds = GameObject.FindWithTag("AudioManager").transform.Find("VoicesContainer").GetComponents<AudioSource>();
         shuffleSounds();
         StartCoroutine(SoundCoroutine());
     }
