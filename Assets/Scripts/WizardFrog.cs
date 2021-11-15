@@ -56,6 +56,8 @@ public class WizardFrog : MonoBehaviour {
             return;
         }
 
+        am.play("wand_target");
+
         this.pc.disableControls();
         this.pc.stop();
 

@@ -7,9 +7,11 @@ public class Portal : MonoBehaviour {
 
     [Header("Unity references")]
     private GameManager gm;
+    private AudioManager am;
 
     void Start() {
         this.gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        this.am = GameObject.FindWithTag("AudioManager").GetComponent<AudioManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -24,6 +26,7 @@ public class Portal : MonoBehaviour {
 
         // go back to menu
         this.gm.setGoToLevelSelect(true);
+        this.am.play("portal");
         SceneManager.LoadScene("Menu");
     }
 
