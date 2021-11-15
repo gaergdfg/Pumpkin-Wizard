@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
     private static GameManager instance;
 
     [Header("Game state")]
-    private int levelNo = 13;
+    private int levelNo = 18;
     private bool[] levelBeaten;
     private bool goToLevelSelect = false;
 

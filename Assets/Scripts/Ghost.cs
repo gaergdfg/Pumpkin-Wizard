@@ -10,7 +10,7 @@ public class Ghost : MonoBehaviour {
     public Transform pointB;
 
     [Header("Basic info")]
-    private float speed = 1f;
+    public float speed = 1f;
     private float threshold = 0.05f;
     private bool goingTowardsB = true;
 
