@@ -109,27 +109,42 @@ MonoBehaviour:
   voicesContainer: {fileID: 323095338063715722}
   sounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: 8de8d63e4d70a1240badc51f444c4eb1, type: 3}
+    clip: {fileID: 8300000, guid: 0bb0fe19a6e51074b8c3589b49667981, type: 3}
     volume: 0.3
     loop: 1
     source: {fileID: 0}
   - name: button_hover
-    clip: {fileID: 8300000, guid: 099507806e1357b4aa80154625b2c9d4, type: 3}
+    clip: {fileID: 8300000, guid: 5a57a8701b1a17d40b37b94d410ffe0e, type: 3}
     volume: 0.3
     loop: 0
     source: {fileID: 0}
   - name: frog_smoke
-    clip: {fileID: 8300000, guid: 099507806e1357b4aa80154625b2c9d4, type: 3}
+    clip: {fileID: 8300000, guid: 7e4fe371f40361346b607e7006c42853, type: 3}
     volume: 0.3
     loop: 0
     source: {fileID: 0}
   - name: frog_talk
-    clip: {fileID: 8300000, guid: 099507806e1357b4aa80154625b2c9d4, type: 3}
+    clip: {fileID: 8300000, guid: f1c7450f1ab003143b7e55d45b28a961, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: portal
+    clip: {fileID: 8300000, guid: 4dc8e172ede3e6741b6d855d03446039, type: 3}
     volume: 0.3
     loop: 0
     source: {fileID: 0}
   - name: player_jump
-    clip: {fileID: 8300000, guid: 099507806e1357b4aa80154625b2c9d4, type: 3}
+    clip: {fileID: 8300000, guid: 05f82adb65883eb48affe5dd6aa9aa7c, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: wand_pickup
+    clip: {fileID: 8300000, guid: c017bba003b14c541a6a072c5808d889, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: wand_target
+    clip: {fileID: 8300000, guid: 7605136e15f43844095de6ae24278b0a, type: 3}
     volume: 0.3
     loop: 0
     source: {fileID: 0}

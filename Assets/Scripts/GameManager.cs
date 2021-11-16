@@ -10,7 +10,9 @@ public class GameManager : MonoBehaviour {
     [Header("Game state")]
     private int levelNo = 18;
     private bool[] levelBeaten;
+    private int levelBeatenCount = 0;
     private bool goToLevelSelect = false;
+    private bool gameCompleted = false;
 
     private void Awake() {
         if (instance == null) {
@@ -28,6 +30,10 @@ public class GameManager : MonoBehaviour {
             return;
         }
 
+        if (++levelBeatenCount == levelNo) {
+            gameCompleted = true;
+        }
+
         this.levelBeaten[levelId] = true;
     }
 
@@ -41,6 +47,10 @@ public class GameManager : MonoBehaviour {
 
     public bool isLevelBeaten(int level) {
         return levelBeaten[level];
+    }
+
+    public bool getGameCompleted() {
+        return this.gameCompleted;
     }
 
 }

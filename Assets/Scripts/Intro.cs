@@ -4,17 +4,20 @@ using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Intro : MonoBehaviour {
 
     [Header("Unity references")]
     private PlayerController pc;
+    private GameManager gm;
     private AudioManager am;
     public TextMeshProUGUI textContainer;
     public GameObject introOverlay;
     public Animator animator;
-    
+
     [Header("Basic info")]
+    public bool endScene = false;
     public string text = "";
     private string[] textArray;
 
@@ -28,6 +31,7 @@ public class Intro : MonoBehaviour {
 
     void Start() {
         this.pc = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        this.gm = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         this.am = GameObject.FindWithTag("AudioManager").GetComponent<AudioManager>();
 
         this.pc.disableControls();
@@ -74,8 +78,14 @@ public class Intro : MonoBehaviour {
                 this.animator.SetBool("talk", false);
 
                 if (Input.GetKeyDown(KeyCode.Space)) {
-                    this.introOverlay.SetActive(false);
-                    StartCoroutine(this.awaitEnableControls());
+                    if (endScene) {
+                        this.gm.setGoToLevelSelect(true);
+                        SceneManager.LoadScene("Menu");
+                    }
+                    else {
+                        this.introOverlay.SetActive(false);
+                        StartCoroutine(this.awaitEnableControls());
+                    }
                 }
             }
         } else {

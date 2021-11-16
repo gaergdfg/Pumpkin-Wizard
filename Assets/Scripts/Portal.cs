@@ -27,7 +27,13 @@ public class Portal : MonoBehaviour {
         // go back to menu
         this.gm.setGoToLevelSelect(true);
         this.am.play("portal");
-        SceneManager.LoadScene("Menu");
+
+        if (gm.getGameCompleted()) {
+            SceneManager.LoadScene("SceneEnd");
+        }
+        else {
+            SceneManager.LoadScene("Menu");
+        }
     }
 
     private int getSceneId(string sceneName) {
