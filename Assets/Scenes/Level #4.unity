@@ -840,9 +840,9 @@ PrefabInstance:
     - target: {fileID: 2011319443834951688, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: text
       value: It's high time I taught you some <b>real</b> magic.<br><br>To cast your
-        first spell, aproach my clone right in front of you and press <color="green">E<color="white">
-        on that magical device of yours. You can make it teleport anywhere in the
-        highlighted area by clicking <color="green">LMB<color="white">.<br><br>In
+        first spell, get <color=#d880e0>REALLY<color="white"> close to my clone right
+        in front of you and press <color="green">E<color="white"> on your keyboard.
+        You can make it teleport anywhere in the highlighted area by clicking <color="green">LMB<color="white">.<br><br>In
         case of an emergency, smash your <color="green">R<color="white"> button.<br><br>Good
         luck!
       objectReference: {fileID: 0}
@@ -905,9 +905,9 @@ PrefabInstance:
     - target: {fileID: 2011319444121810453, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_text
       value: It's high time I taught you some <b>real</b> magic.<br><br>To cast your
-        first spell, aproach my clone right in front of you and press <color="green">E<color="white">
-        on that magical device of yours. You can make it teleport anywhere in the
-        highlighted area by clicking <color="green">LMB<color="white">.<br><br>In
+        first spell, get <color=#d880e0>REALLY<color="white"> close to my clone right
+        in front of you and press <color="green">E<color="white"> on your keyboard.
+        You can make it teleport anywhere in the highlighted area by clicking <color="green">LMB<color="white">.<br><br>In
         case of an emergency, smash your <color="green">R<color="white"> button.<br><br>Good
         luck!
       objectReference: {fileID: 0}
