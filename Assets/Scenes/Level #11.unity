@@ -1049,7 +1049,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2011319444121810453, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_text
-      value: placeholder
+      value: Aaaah! A <color="grey">GHOST<color="white">!<br><br>I hate these fools!
+        They always give me goosebumps, or rather FROGbumps...<br><br>Getting too
+        close to him surely won't end well for you so try to find a safe path.<br><br>And
+        don't get spooooked!
       objectReference: {fileID: 0}
     - target: {fileID: 2011319444542862925, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_IsActive
