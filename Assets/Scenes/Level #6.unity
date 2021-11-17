@@ -1144,11 +1144,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2011319443834951688, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: text
-      value: "\u266B\u266B\u266B Highway to <color=\"red\">HELL<color=\"white\">
-        \u266B\u266B\u266B<br><br>Uh, oh, sorry... I meant<br><br>\u266B\u266B\u266B
-        We're on a stairway to <color=\"lightblue\">HEAVEN<color=\"white\"> \u266B\u266B\u266B<br><br>I
-        think this one suits your situation well<br><br>\u266B\u266B\u266B We're
-        on a frogway to <color=\"purple\">PORTAL<color=\"white\"> \u266B\u266B\u266B"
+      value: = = = Highway to <color="red">HELL<color="white"> = = =<br><br>Uh, oh,
+        sorry... I meant<br><br>= = = We're on a stairway to <color="lightblue">HEAVEN<color="white">
+        = = =<br><br>I think this one suits your situation well<br><br>= = = We're
+        on a frogway to <color="purple">PORTAL<color="white"> = = =
       objectReference: {fileID: 0}
     - target: {fileID: 2011319443834951689, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_RootOrder
@@ -1204,11 +1203,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2011319444121810453, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_text
-      value: "\u266B\u266B\u266B Highway to <color=\"red\">HELL<color=\"white\">
-        \u266B\u266B\u266B<br><br>Uh, oh, sorry... I meant<br><br>\u266B\u266B\u266B
-        We're on a stairway to <color=\"lightblue\">HEAVEN<color=\"white\"> \u266B\u266B\u266B<br><br>I
-        think this one suits your situation well<br><br>\u266B\u266B\u266B We're
-        on a frogway to <color=\"purple\">PORTAL<color=\"white\"> \u266B\u266B\u266B"
+      value: = = = Highway to <color="red">HELL<color="white"> = = =<br><br>Uh, oh,
+        sorry... I meant<br><br>= = = We're on a stairway to <color="lightblue">HEAVEN<color="white">
+        = = =<br><br>I think this one suits your situation well<br><br>= = = We're
+        on a frogway to <color="purple">PORTAL<color="white"> = = =
       objectReference: {fileID: 0}
     - target: {fileID: 2011319444542862925, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_IsActive
