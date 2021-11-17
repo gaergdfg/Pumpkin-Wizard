@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Escape)) {
             // TODO: possible music change
+            am.stop("frog_talk");
             this.gm.setGoToLevelSelect(true);
             SceneManager.LoadScene("Menu");
         }
