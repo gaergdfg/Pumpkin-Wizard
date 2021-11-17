@@ -1,4 +1,4 @@
-# Wizard-Pumpkin
+# Pumpkin-Wizard
 
 You can play the latest version of the game by downloading it from here:
 
