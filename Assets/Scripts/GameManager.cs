@@ -26,15 +26,15 @@ public class GameManager : MonoBehaviour {
     }
 
     public void markLevelBeaten(int levelId) {
-        if (levelId > levelNo) {
+        if (levelId > levelNo || this.levelBeaten[levelId]) {
             return;
         }
+
+        this.levelBeaten[levelId] = true;
 
         if (++levelBeatenCount == levelNo) {
             gameCompleted = true;
         }
-
-        this.levelBeaten[levelId] = true;
     }
 
     public bool getGoToLevelSelect() {
