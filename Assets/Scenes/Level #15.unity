@@ -1428,7 +1428,7 @@ PrefabInstance:
     - target: {fileID: 2011319443834951688, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: text
       value: This one's tricky.<br>But I believe in you!<br><br>And it's not just
-        because of the bet i made...<br><br>Don't let me down!
+        because of the bet I made...<br><br>Don't let me down!
       objectReference: {fileID: 0}
     - target: {fileID: 2011319443834951689, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_RootOrder
@@ -1485,7 +1485,7 @@ PrefabInstance:
     - target: {fileID: 2011319444121810453, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_text
       value: This one's tricky.<br>But I believe in you!<br><br>And it's not just
-        because of the bet i made...<br><br>Don't let me down!
+        because of the bet I made...<br><br>Don't let me down!
       objectReference: {fileID: 0}
     - target: {fileID: 2011319444542862925, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_IsActive

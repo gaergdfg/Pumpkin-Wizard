@@ -1411,8 +1411,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2011319443834951688, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: text
-      value: ' What the worst thing about being an illiterate wizard? <br><br>You
-        can''t <color="purple">spell<color="white">. <br><br>Hahahahhahah HA'
+      value: What the worst thing about being an illiterate wizard? <br><br>You can't
+        <color="purple">spell<color="white">. <br><br>Hahahahhahah HA
       objectReference: {fileID: 0}
     - target: {fileID: 2011319443834951689, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_RootOrder

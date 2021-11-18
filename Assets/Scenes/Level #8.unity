@@ -931,9 +931,10 @@ PrefabInstance:
     - target: {fileID: 2011319443834951688, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: text
       value: You've proven yourself worthy of handling my most precious possession!
-        In front of yuou floats <color="purple">Betty<color="white">, my <color="purple">Magic
+        In front of you floats <color="purple">Betty<color="white">, my <color="purple">Magic
         Wand<color="white">! Take great care of it.<br><br>Once you have <color="purple">Betty<color="white">
-        in your grasp, you can command my clones to teleport from great distances!
+        in your grasp, you can command my clones to teleport from great distances!<br><br>Be
+        precise though! You can teleport each of my clones only <color=#d880e0>ONCE<color=white>.
       objectReference: {fileID: 0}
     - target: {fileID: 2011319443834951689, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_RootOrder
@@ -990,7 +991,7 @@ PrefabInstance:
     - target: {fileID: 2011319444121810453, guid: d01db1b53a75f6646ac56a298cedecdf, type: 3}
       propertyPath: m_text
       value: You've proven yourself worthy of handling my most precious possession!
-        In front of yuou floats <color="purple">Betty<color="white">, my <color="purple">Magic
+        In front of you floats <color="purple">Betty<color="white">, my <color="purple">Magic
         Wand<color="white">! Take great care of it.<br><br>Once you have <color="purple">Betty<color="white">
         in your grasp, you can command my clones to teleport from great distances!<br><br>Be
         precise though! You can teleport each of my clones only <color=#d880e0>ONCE<color=white>.
