@@ -11,6 +11,8 @@ public class Pointer : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
     private Button button;
     private GameObject canvas;
 
+    private float buttonWidth;
+    private float buttonHeight;
     private Vector3 pointerPosition;
 
     private void Awake() {
@@ -25,9 +27,8 @@ public class Pointer : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
         button.onClick.AddListener(DisablePointer);
 
         RectTransform rectTransform = GetComponent<RectTransform>();
-        float width = rectTransform.rect.width * canvas.transform.localScale.x;
-        float height = rectTransform.rect.height * canvas.transform.localScale.y;
-        pointerPosition = new Vector3(transform.position.x + width / 2, transform.position.y + height / 2, transform.position.z);
+        buttonWidth = rectTransform.rect.width;
+        buttonHeight = rectTransform.rect.height;
     }
 
     private void DisablePointer() {
@@ -35,6 +36,7 @@ public class Pointer : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
     }
 
     public void OnPointerEnter(PointerEventData eventData) {
+        pointerPosition = new Vector3(transform.position.x + buttonWidth * canvas.transform.localScale.x / 2, transform.position.y + buttonHeight * canvas.transform.localScale.y / 2, transform.position.z);
         pointer.transform.position = pointerPosition;
         pointerImage.enabled = true;
         audioManager.play("button_hover");
