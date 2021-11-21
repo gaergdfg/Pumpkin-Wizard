@@ -21,8 +21,9 @@ Become a true Pumpkin Wizard on your way through spooky challenges!
   <p>To play the game online click the Magic Frog</p>
 </div>
    
-## Screenshots and gifs
-   
-   
-   
+## Screenshots
 
+![ss1](https://user-images.githubusercontent.com/65187002/142757968-0d3253e9-957a-4341-9575-e8cce697f92b.png)
+![ss2](https://user-images.githubusercontent.com/65187002/142757971-adbfd37f-a90c-41ef-b33a-02525981ebd2.png)
+![ss3](https://user-images.githubusercontent.com/65187002/142757976-4d197ba6-8201-452a-abac-b14317369f85.png)
+![ss4](https://user-images.githubusercontent.com/65187002/142757978-7f0f7969-de95-4ebd-aae7-a97d7835363a.png)
